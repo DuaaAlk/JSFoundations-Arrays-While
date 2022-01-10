@@ -10,7 +10,11 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+  return (numbers.length % 2 !== 0 ) ;
 }
+console.log( "isArrayLengthOdd([1, 2, 3]) -->", isArrayLengthOdd([1, 2, 3]));
+console.log( "isArrayLengthOdd([1, 2, 3]) -->", isArrayLengthOdd([1, 2, 3, 4]));
+
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,7 +28,10 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  return (numbers.length % 2 === 0 ) ;
 }
+console.log( "isArrayLengthEven([1, 2, 3]) -->", isArrayLengthEven([1, 2, 3]));
+console.log( "isArrayLengthEven([1, 2, 3]) -->", isArrayLengthEven([1, 2, 3, 4]));
 
 /**
  * addLailaToArray(instructors):
@@ -36,7 +43,12 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  let array = instructors;
+  array.push("Laila");
+  return array;
 }
+console.log( "addLailaToArray([Mshary, Hasan]) -->", addLailaToArray(["Mshary", "Hasan"]));
+
 
 /**
  * eliminateTeam(teams):
@@ -48,7 +60,10 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  return teams.pop();
 }
+
+console.log( "eliminateTeam([Brazil, Germany, Italy]) -->", eliminateTeam(["Brazil", "Germany", "Italy"]));
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -62,7 +77,10 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  return (fruits.length % 2 === 0) ? fruits.slice((fruits.length/2), fruits.length) : [] ;
 }
+console.log("secondHalfOfArrayIfItIsEven([apple, orange, banana, kiwi]) ->",  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+console.log("secondHalfOfArrayIfItIsEven([apple, orange, banana]) ->",  secondHalfOfArrayIfItIsEven(["apple", "orange", "banana"]));
 
 /**
  * youGottaCalmDown(shout):
@@ -80,7 +98,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  return shout.includes("!")? shout.slice(0,shout.indexOf("!")+1) : shout;
+
 }
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
+
 
 module.exports = {
   isArrayLengthOdd,
